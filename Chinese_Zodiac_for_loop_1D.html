@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Chinese Zodiac JavaScript for loop (1D array)</title>
+	<meta content="utf-8">
+</head>
+
+<body>
+<h2>Chinese Zodiac JavaScript for loop (1D array)</h2>
+
+<script>
+	var SignNames = new Array(
+		 "Rat",
+		 "Ox",
+		 "Tiger",
+		 "Rabbit",
+		 "Dragon",
+		 "Snake",
+		 "Horse",
+		 "Goat",
+		 "Monkey",
+		 "Rooster",
+		 "Dog",
+		 "Pig");
+		 
+    var SignImages = new Array(
+         "rat.gif",
+         "ox.gif",
+         "tgr.gif",
+         "rbt.png",
+         "drgn.png",
+         "snk.png",
+         "hrs.gif",
+         "gt.gif",
+         "mnky.png",
+         "rstr.gif",
+         "dog.gif",
+         "pig.gif");
+		
+
+	var d = new Date();				 
+	document.writeln("<table>");
+   
+    document.writeln("<tr>");
+    for( i=0; i<SignImages.length; i++){ 
+    document.writeln("<td>");   
+	document.writeln(SignNames[i]);
+    document.writeln("<img  src=\"Images/" + SignImages[i] + "\"/>"); 
+    document.writeln("</td>");   
+    }
+    document.writeln("</tr>");
+   
+    document.writeln("<tr>");
+    for(var y=1912; y<=d.getFullYear(); y++){
+	document.writeln("<td>");
+	document.writeln(y);
+    document.writeln("</td>");
+		if(y%12==3){
+		document.writeln("</tr>");
+		document.writeln("<tr>");
+		}
+	}
+	document.writeln("</tr>");
+	document.writeln("</table>");
+		 
+</script>
+
+
+<style type="text/css">
+
+table {
+width: 100%;
+text-align: center;
+border-collapse:collapse; 
+}
+
+table td{ 
+padding:7px; 
+border:white 1px solid;
+}
+ 
+table tr{
+background:#a63a00;
+color: yellow;
+}
+
+ 
+table tr:first-child{
+font-weight: bold;
+}
+ 
+table tr td:nth-child(even){
+background:#ff5900;
+color: white;
+}
+
+body{
+font-family: Arial;
+text-align: center;
+}
+
+h2{
+color: yellow;
+background-color:#ff5900;
+text-align: center;
+}
+
+</style>
+</body>
+</html>
+
